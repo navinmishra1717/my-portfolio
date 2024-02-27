@@ -2,14 +2,14 @@
 
 import React from "react";
 import { cn } from "@/utils/cn";
-import { ThreeDCard } from "@/components/ThreeDCard";
+import { ThreeDProfile } from "@/components/ThreeDProfile";
 import { SparklesCore } from "@/components/ui/sparkles";
 
 export default function About() {
   return (
     <div
       className={cn(
-        "relative flex flex-row min-h-screen w-full bg-slate-950 items-center justify-center overflow-hidden rounded-md z-0"
+        "relative flex flex-row min-h-screen w-full bg-slate-950 items-center justify-center overflow-hidden rounded-md z-0",
       )}
     >
       <div className="container mx-auto grid md:grid-cols-2 items-center justify-center md:justify-between">
@@ -37,7 +37,7 @@ export default function About() {
             in Software developer role.
           </div>
         </div>
-        <ThreeDCard />
+        <ThreeDProfile />
       </div>
     </div>
   );

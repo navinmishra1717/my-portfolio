@@ -5,7 +5,7 @@ import React from "react";
 import { CardContainer, CardItem } from "./ui/3d-card";
 import ProfileImage from "../../public/profile.jpg";
 
-export function ThreeDCard() {
+export function ThreeDProfile() {
   return (
     <CardContainer className="inter-var">
       <CardItem translateZ="100" className="w-full">
