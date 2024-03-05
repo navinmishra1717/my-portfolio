@@ -30,12 +30,12 @@ function Navbar({ className }: { className?: string }) {
         >
           <HoveredLink href="/projects">Projects</HoveredLink>
         </motion.p>
-        <motion.p
+        {/* <motion.p
           transition={{ duration: 0.3 }}
           className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
         >
           <HoveredLink href="/blogs">Blogs</HoveredLink>
-        </motion.p>
+        </motion.p> */}
         <motion.p
           transition={{ duration: 0.3 }}
           className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
