@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main className="min-h-screen antialiased bg-grid-white/[0.02]">
       <Lamp>
-        <Typewriter />
+        {/* <Typewriter /> */}
         <Link href="/about">
           <AboutButton />
         </Link>
