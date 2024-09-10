@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import { cn } from "@/utils/cn";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyDg0AkmPLFam8gv17w7yB_5GoDyLIZWiiE");
+// const genAI = new GoogleGenerativeAI("AIzaSyDg0AkmPLFam8gv17w7yB_5GoDyLIZWiiE");
+const genAI = new GoogleGenerativeAI("AIzaSyAOZxCM_0D19gXxdwlGog8evjeTYM6abL4");
 
 export default function Chat() {
   const [prompt, setPrompt] = useState("");
@@ -19,7 +20,9 @@ export default function Chat() {
     e.preventDefault();
     if (!prompt) return;
     setLoading(true);
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({
+      model: "gemini-1.5-flash",
+    });
     const promptMsg = `My name is Navin Mishra. I live in kathmandu. My hometown is Lamjung. I am currently working at EBPearls. I am in the software development role. 
     I am 26 years old. Please think yourself as me and answer the question. Answer must be within 100 words. Question is:- "${prompt}"`;
     const result = await model.generateContent(promptMsg);
@@ -32,7 +35,7 @@ export default function Chat() {
   return (
     <div
       className={cn(
-        "relative flex flex-row min-h-screen w-full bg-slate-950 items-center justify-center overflow-hidden rounded-md z-0"
+        "relative flex flex-row min-h-screen w-full bg-slate-950 items-center justify-center overflow-hidden rounded-md z-0",
       )}
     >
       <div className="relative w-1/3 px-4 py-2 my-4 flex flex-col items-end text-gray-800 bg-gray-200 rounded-md border-2 border-gray-200">
